@@ -1,13 +1,14 @@
+import { useState } from "react";
 import Program from "./program/index.jsx";
 import Table from "./tables/index.jsx"
 
-function App() {
+export default function App() {
+  const [BM, setBM] = useState(0);
+
   return (
     <>
-    <Program />
-    <Table />
+    <Program setBM={setBM}/>
+    <Table BM={BM}/>
     </>
   )
 }
-
-export default App
